@@ -38,7 +38,7 @@ export default function Home() {
   }, []);
 
   return (
-    <>
+    <div className='flex flex-row'>
       <Navbar />
       <div className="container mx-auto p-4 w-full h-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
@@ -50,6 +50,6 @@ export default function Home() {
         </div>
         {selectedProduct && <RightBar product={selectedProduct} onClose={handleClose} />}
       </div>
-    </>
+    </div>
   );
 }

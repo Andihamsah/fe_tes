@@ -1,12 +1,12 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 'use client'
 import React, { useEffect, useState } from 'react';
-import Button from '@/components/button';
-import ModalProduct from '@/components/modalProduct';
-import Navbar from '@/components/navbar';
-import Produk from './Produk';
+import Button from '@/components/Button';
+import ModalProduct from '@/components/ModalProduct';
+import Navbar from '@/components/Navbar';
 import { api } from '@/utils/api';
 import axios from 'axios';
+import Produk from './Produk';
 
 export default function Page() {
   const [value, setValue] = useState<string | undefined>('');
@@ -112,10 +112,10 @@ export default function Page() {
   }, []);
 
   return (
-    <div>
+    <div className='flex flex-row'>
       <Navbar />
       {role !== 'admin' ? (
-        <div className='flex flex-col items-center justify-center h-full'>
+        <div className='flex flex-col items-center justify-center h-full p-4'>
           <p>You dont have a store yet. Click the button below to create one!</p>
           <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={handleCreateStore}>
             Create Store

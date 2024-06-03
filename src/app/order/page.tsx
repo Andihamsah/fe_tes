@@ -55,10 +55,10 @@ export default function Order() {
   };
 
   return (
-    <>
+    <div className='flex flex-row'>
       <Navbar />
       <Table pembelian={pembelian} onDelete={handleRetur} onView={handleDetailProduct} />
       <ModalPurchaseDetail isOpen={isModalView} onClose={handleCloseModal} purchase={selectedProduct} />
-    </>
+    </div>
   );
 }
