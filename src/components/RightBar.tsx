@@ -55,7 +55,7 @@ const RightBar: React.FC<RightBarProps> = ({ product, onClose }) => {
   };
 
   return (
-    <div className="fixed right-0 top-[68px] h-full w-64 bg-white shadow-lg p-4">
+    <div className="fixed right-0 top-0 h-full w-64 bg-white shadow-lg p-4">
       <button onClick={onClose} className="mb-4 text-red-500">Close</button>
       <h2 className="text-xl font-bold mb-4">Atur Jumlah Barang</h2>
       <ProductImage product={product} />
